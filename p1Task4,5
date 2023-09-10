@@ -1,0 +1,31 @@
+import java.util.Scanner;
+import java.util.Arrays;
+public class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Введите длину массива");
+        int a =in.nextInt();
+        int [] list =new int [a];
+        System.out.println("ВВедите элементы массива");
+        int listsum = 0;
+        int n =0;
+        int i=0;
+        while(i<list.length){
+            n = in.nextInt();
+            list[i] = n;
+            listsum = listsum + n;
+            i++;
+        }
+        Arrays.sort(list);
+        int max = list[0];
+        int min = list[a - 1];
+
+        System.out.println(max);
+        System.out.println(min);
+        System.out.println(listsum);
+
+
+
+
+    }
+}
