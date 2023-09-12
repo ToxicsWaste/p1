@@ -1,12 +1,17 @@
+import java.math.*;
 import java.util.Scanner;
- 
-public class Factorial {
-    public static void main(String args[]) {
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("ВВедите число, чтобы найти его факториал");
         Scanner in = new Scanner(System.in);
-        int num = in.nextInt();
-        int result = 1;
-        for (int i = 1; i <= num; i++) {
-            result = result * i;
+        int a = in.nextInt();
+        compute(a);
+    }
+
+    public static void compute(int n) {
+        BigInteger result = BigInteger.ONE;
+        for (int i = 1; i <= n; i++) {
+            result = result.multiply(BigInteger.valueOf(i));
         }
         System.out.println(result);
     }
